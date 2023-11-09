@@ -46,8 +46,10 @@ const Cart = () => {
         const data = await res.json()
 
         const stripe = await stripePromise
-
+        handleRemoveProduct()
         await stripe.redirectToCheckout({ sessionId: data.id })
+
+
     }
   return (
     <section className='px-4 py-8 max-w-screen-xl mx-auto'>
