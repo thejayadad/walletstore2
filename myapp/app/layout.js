@@ -1,9 +1,13 @@
+'use client'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import SessionProvider from "../SessionProvider.js"
 import Navbar from '@/components/Navbar/Navbar'
 import Footer from '@/components/Footer/Footer'
+import { Provider } from 'react-redux'
+import { PersistGate } from 'redux-persist/integration/react'
 const inter = Inter({ subsets: ['latin'] })
+import {persistor, store} from "../redux/store"
 
 // export const metadata = {
 //   title: 'Create Next App',
@@ -14,12 +18,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-     <SessionProvider>
-      <Navbar />
-     {children}
-     <Footer />
-     </SessionProvider>
-        </body>
+      <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <SessionProvider>
+        <Navbar />
+          {children}
+        <Footer />
+        </SessionProvider>
+        </PersistGate>
+      </Provider>
+      </body>
     </html>
   )
 }

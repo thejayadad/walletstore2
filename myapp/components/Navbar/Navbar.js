@@ -1,12 +1,15 @@
 'use client'
-import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import {signIn, signOut, useSession} from 'next-auth/react'
 import { AiOutlineHeart, AiOutlineShoppingCart } from 'react-icons/ai'
+import { useSelector } from 'react-redux'
+
 
 const Navbar = () => {
   const {data: session} = useSession()
+  const products = useSelector((state) => state.cart.products)
+
 
   return (
     <header className='px-4 py-12 bg-blue-300'>
@@ -14,11 +17,13 @@ const Navbar = () => {
         <Link href={'/'}>WalletWorld</Link>
         <div className='flex gap-4'>
         {
-                    session?.user
+        session?.user
                     ? (
                         <div className='flex gap-4 items-center'>
                             <Link className='flex flex-col ' href={'/cart'}>
-                                <span className=''>0</span>
+                                <span className='text-black'>
+                                {products?.length}
+                                </span>
                             <AiOutlineShoppingCart />
                             </Link>
                             <Link href={'/cart'}>
