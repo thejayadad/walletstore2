@@ -12,8 +12,6 @@ module.exports = {
         'background': '#242325',
         'oran': '#dc965a',
         'sage': '#bbb891',
-        'white': 'var(--white)',
-        'black': 'var(--black)',
       },
       fontFamily: {
         'jost': ['var(--ff-jost)', 'sans-serif'],

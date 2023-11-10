@@ -6,8 +6,8 @@ import hero1 from "../../public/hero1.png"
 
 const heroTextures = [
   { source: 'https://images.pexels.com/photos/1420707/pexels-photo-1420707.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', alt: 'Hero 1' },
-  { source: hero1, alt: 'Hero 1' },
-  { source: hero1, alt: 'Hero 1' },
+  { source: 'https://images.pexels.com/photos/157888/fashion-glasses-go-pro-female-157888.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', alt: 'Hero 1' },
+  { source: 'https://images.pexels.com/photos/989965/pexels-photo-989965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', alt: 'Hero 1' },
 ];
 
 
@@ -64,11 +64,11 @@ const HeroSection = ({ isNonMobile }) => {
             <img
               src={texture.source}
               alt={`carousel-${index}`}
-              className="w-full h-700 object-cover bg-fixed"
+              className="w-full h-500 object-cover bg-fixed"
             />
-            <div
-              className={`absolute top-1/2 ${
-                isNonMobile ? 'left-1/2 transform -translate-x-1/2' : 'mx-auto'
+                <div
+              className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${
+                isNonMobile ? '' : 'mx-auto'
               }`}
               style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', padding: '20px', borderRadius: '8px', zIndex: 100 }}
             >

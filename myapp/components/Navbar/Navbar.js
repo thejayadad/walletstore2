@@ -26,7 +26,7 @@ const Navbar = () => {
                     ? (
                         <div className='flex gap-4 items-center'>
                         <Link className='flex flex-col relative' href={'/cart'}>
-                          <span className='text-black absolute -top-4 -right-2 bg-white rounded-full px-2'>
+                          <span className='text-black text-9 absolute -top-5 -right-.5 bg-white rounded-full px-1'>
                             {products?.length}
                           </span>
                           <AiOutlineShoppingCart />

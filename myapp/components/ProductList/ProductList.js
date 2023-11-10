@@ -22,11 +22,13 @@ const ProductList = () => {
     }, []);
 
   return (
-    <section className="px-4 py-8 max-w-screen-xl mx-auto">
+    <section className="py-8 max-w-screen-xl mx-auto flex flex-col items-center">
         <h2 className="text-center">All Wallets</h2>
-      {products.map((product) => (
-        <ProductCard key={product._id} product={product} />
-      ))}
+        <div className="items-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 h-[600px] gap-2">
+        {products.map((product) => (
+          <ProductCard key={product._id} product={product} />
+        ))}
+      </div>
     </section>
   );
 };
