@@ -1,7 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* 
+.btn {
+  @apply bg-background text-color font-semibold h-height px-5 border border-border-color rounded flex justify-center items-center;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  @apply bg-white text-eerie-black border-eerie-black;
+}
+
+.btn-secondary {
+  @apply h-50 bg-white text-eerie-black border-white;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+  @apply bg-eerie-black text-white border-eerie-black;
+}
+
+.btn-outline {
+  @apply h-50 bg-white text-eerie-black border-eerie-black px-4;
+}
+
+.btn-outline:hover, .btn-outline:focus {
+  @apply bg-eerie-black text-white border-eerie-black;
+} */
+
 
 body{
   overflow-x: hidden;
+  background-color: #bbb891;
+}
+h1,h2,h3,h4{
+  font-weight: 600;
+}
+
+h1{
+  line-height: 1;
+  font-size: 2.5rem;
+  
+}
+h2{
+font-size: 1.75rem;
+}
+h3{
+  font-size: 1.25rem;
+}
+h4{
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.section-padding{
+  padding: 60px;
 }

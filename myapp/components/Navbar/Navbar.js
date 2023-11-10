@@ -12,20 +12,25 @@ const Navbar = () => {
 
 
   return (
-    <header className='px-4 py-12 bg-blue-300'>
+    <header className='section-padding'>
         <div className='flex justify-between items-center mx-auto max-w-screen-xl'>
-        <Link href={'/'}>WalletWorld</Link>
+        <Link href={'/'}>
+      <span className='text-3xl font-semibold'>
+        <span className='text-oran'>Wallet</span>
+        <span className='text-secondary'>World</span>
+      </span>
+    </Link>
         <div className='flex gap-4'>
         {
         session?.user
                     ? (
                         <div className='flex gap-4 items-center'>
-                            <Link className='flex flex-col ' href={'/cart'}>
-                                <span className='text-black'>
-                                {products?.length}
-                                </span>
-                            <AiOutlineShoppingCart />
-                            </Link>
+                        <Link className='flex flex-col relative' href={'/cart'}>
+                          <span className='text-black absolute -top-4 -right-2 bg-white rounded-full px-2'>
+                            {products?.length}
+                          </span>
+                          <AiOutlineShoppingCart />
+                        </Link>
                             <Link href={'/cart'}>
                             <AiOutlineHeart />
                             </Link>

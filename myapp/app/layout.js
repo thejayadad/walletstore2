@@ -1,5 +1,5 @@
 'use client'
-import { Inter } from 'next/font/google'
+import { Inter, Cinzel } from 'next/font/google'
 import './globals.css'
 import SessionProvider from "../SessionProvider.js"
 import Navbar from '@/components/Navbar/Navbar'
@@ -7,6 +7,8 @@ import Footer from '@/components/Footer/Footer'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 const inter = Inter({ subsets: ['latin'] })
+const cinzel = Cinzel({ subsets: ['latin'] })
+
 import {persistor, store} from "../redux/store"
 
 // export const metadata = {
@@ -17,7 +19,7 @@ import {persistor, store} from "../redux/store"
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={cinzel.className}>
       <Provider store={store}>
       <PersistGate persistor={persistor}>
         <SessionProvider>
